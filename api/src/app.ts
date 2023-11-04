@@ -23,7 +23,7 @@ class App {
   }
 
   routes() {
-    this.app.use('/product', productRoutes)
+    this.app.use('/products', productRoutes)
   }
 }
 

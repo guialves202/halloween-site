@@ -4,7 +4,7 @@ import ProductController from '../controllers/product'
 const router = Router()
 
 router.get('/', ProductController.index)
-router.get('/:category', ProductController.indexSpecificCategory)
+router.get('/category/:category', ProductController.indexSpecificCategory)
 router.get('/:id', ProductController.show)
 
 router.post('/', ProductController.store)
