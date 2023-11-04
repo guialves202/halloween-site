@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: sans-serif;
+  font-family: 'Griffy', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +14,9 @@
   --black: #111;
   --gray: #222222;
   --soft-white: #f1f1f1;
-  --blue: #0096ff;
+  --primary: #2c0047;
+  --secondary: #ffc640;
+  --terceary: #7b2486;
 }
 
 * {
@@ -26,10 +28,117 @@
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--terceary);
+  border-radius: 5px;
+}
+
 body {
   min-height: 100vh;
 }
 
 button {
   cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: var(--terceary);
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  transition: filter .2s ease;
+}
+
+.creepy-font {
+  font-family: 'Nosifer';
+}
+
+.btn-primary:hover {
+  filter: brightness(80%);
+}
+
+.category-item {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.category-item:hover {
+  background-color: var(--secondary);
+  color: var(--terceary);
+}
+
+.card:hover > .heart, .card:hover > .cart {
+  display: block;
+}
+
+.product-jumpscare {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.abobora {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  height: auto;
+  width: 10%;
+  opacity: 0;
+  z-index: 9999;
+  animation: 60s linear 10s abobora-aumentando;
+}
+
+@keyframes abobora-aumentando {
+  0% {
+    opacity: 0;
+    width: 10%;
+    transform: translate(-10%, -10%);
+  }
+
+  20% {
+    opacity: 0.05;
+    width: 20%;
+    transform: translate(-15%, -15%);
+  }
+
+  40% {
+    opacity: 0.1;
+    width: 40%;
+    transform: translate(-25%, -25%);
+  }
+
+  60% {
+    opacity: 0.15;
+    width: 60%;
+    transform: translate(-30%, -30%);
+  }
+
+  80% {
+    opacity: 0.25;
+    width: 80%;
+    transform: translate(-40%, -40%);
+  }
+
+  100% {
+    opacity: 0.3;
+    width: 100%;
+    transform: translate(-45%, -45%);
+  }
 }

@@ -1,8 +1,10 @@
-import './App.css'
+import { Home } from "./components/Home"
 
 function App() {
   return (
-    <h1>Halloween</h1>
+    <>
+      <Home />
+    </>
   )
 }
 
