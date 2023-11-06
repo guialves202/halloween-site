@@ -43,6 +43,6 @@ async function main() {
   })
 }
 
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 8; i++) {
   main()
 }
