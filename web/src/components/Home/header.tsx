@@ -25,12 +25,12 @@ export function Header() {
 
     setTimeout(() => {
       root.removeChild(spider)
-      navigate('/products')
+      navigate('/products/vassouras')
     }, 4000)
   }
 
   return (
-    <header className='flex justify-between py-4 px-8 bg-primary items-center text-white max-h-[10vh]'>
+    <header className='flex justify-between py-4 px-8 bg-primary items-center text-white h-[10vh]'>
       <div>
         <Link to='/'>
           <GiPumpkinMask className='text-6xl text-secondary' />
@@ -38,7 +38,7 @@ export function Header() {
       </div>
 
       <div>
-        <button className='btn-primary' onClick={activeSpider}>Comprar</button>
+        <button className='btn-primary' onClick={activeSpider}>Explorar</button>
       </div>
     </header>
   )

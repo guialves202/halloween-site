@@ -26,23 +26,23 @@ export function Main() {
 
     setTimeout(() => {
       root.removeChild(spider)
-      navigate('/products')
+      navigate('/products/vassouras')
     }, 4000)
   }
 
   return (
-    <main className='bg-primary max-h-[90vh] grid grid-cols-2 grid-rows-1 relative'>
-      <div className='flex items-center pt-[20vh] flex-col gap-10'>
-        <h1 className='creepy-font text-5xl text-secondary'>HAPPY HALLOWEEN</h1>
-        <p className='text-white text-lg text-center w-[80%]'>O Halloween chegou e o terror está no ar! Aproveite e adquira todos os itens necessários para aterrorizar suas vítimas nessa data única.</p>
+    <main className='bg-primary h-[90vh] grid min-[1000px]:grid-cols-2 min-[1000px]:grid-rows-1 relative grid-cols-1 grid-rows-2 overflow-x-hidden'>
+      <div className='flex items-center min-[1000px]:pt-[20vh] pt-[5vh] flex-col gap-10 z-10'>
+        <h1 className='creepy-font text-secondary sm:text-2xl min-[793px]:text-3xl lg:text-4xl xl:text-5xl'>HAPPY HALLOWEEN</h1>
+        <p className='text-white text-center w-[80%] max-[639px]:text-sm md:text-sm lg:text-base xl:text-lg'>O Halloween chegou e o terror está no ar! Aproveite e adquira todos os itens necessários para aterrorizar suas vítimas nessa data única.</p>
         <button className='btn-primary' onClick={activeSpider}>Descobrir mais</button>
       </div>
 
-      <div className='overflow-hidden'>
-        <img src={Castelo} />
+      <div className='overflow-hidden min-[1000px]:relative'>
+        <img src={Castelo} className='absolute bottom-0 right-0 h-auto max-[1000px]:w-[50%] max-[1000px]:right-[50%] max-[1000px]:transform max-[1000px]:translate-x-[50%]' />
       </div>
 
-      <img src={Aboboras} className='absolute bottom-0 left-10 h-[30%]' />
+      <img src={Aboboras} className='absolute bottom-0 left-10 h-[30%] max-[1000px]:h-[20%]' />
     </main>
   )
 }

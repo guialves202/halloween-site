@@ -6,6 +6,7 @@ export enum Categories {
 }
 
 export type ProductModel = {
+  id: string
   name: string
   description: string
   price: number
