@@ -11,3 +11,9 @@ services:
       - POSTGRESQL_USERNAME=docker
       - POSTGRESQL_PASSWORD=docker
       - POSTGRESQL_DATABASE=halloween
+  redis:
+    image: redis
+    container_name: redis-db
+    command: redis-server --requirepass gui123456
+    ports:
+      - 6379:6379
