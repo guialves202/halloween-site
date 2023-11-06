@@ -16,7 +16,6 @@ class ProductController {
     const category = req.params.category
 
     if (!category) return res.status(400).send('Por favor informe uma categoria')
-    console.log(category)
     if (!Object.values(Categories).includes(category as Categories)) return res.status(400).send('Por favor informe uma categoria válida')
 
     try {
