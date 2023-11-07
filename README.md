@@ -9,15 +9,18 @@ docker-compose up -d
 Feel free to change something in docker-compose file. After this, create a .env file follwing the .env.example and then run the command to generate database and seed it:
 ```
 npx prisma migrate dev
-npx prisma db sedd
+npx prisma db seed
 ```
 Then run this command to start the program:
 ```
 npm run dev
 ```
-You have now the api running. Then go to web folder and run:
+You have now the api running. Then go to web folder and run (you can use any other package manager):
 ```
 npm install
+```
+Finally, run:
+```
+npm run tailwind
 npm run dev
 ```
-Or use any other package manager.
