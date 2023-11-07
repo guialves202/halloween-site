@@ -15,6 +15,7 @@
   --gray: #222222;
   --soft-white: #f1f1f1;
   --primary: #2c0047;
+  /* --primary: #0b042d; */
   --secondary: #ffc640;
   --terceary: #7b2486;
 }
@@ -100,12 +101,17 @@ button {
 .abobora {
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 50%;
   height: auto;
   width: 10%;
   opacity: 0;
   z-index: 9999;
+  transform: translate(-50%,-50%);
   animation: 60s linear 10s abobora-aumentando;
+}
+
+.gradient-background {
+  background: radial-gradient(ellipse at bottom, var(--primary) 0%,#0b042d 100%);
 }
 
 
@@ -113,37 +119,31 @@ button {
   0% {
     opacity: 0;
     width: 10%;
-    transform: translate(-10%, -10%);
   }
 
   20% {
     opacity: 0.05;
     width: 20%;
-    transform: translate(-15%, -15%);
   }
 
   40% {
     opacity: 0.1;
     width: 40%;
-    transform: translate(-25%, -25%);
   }
 
   60% {
     opacity: 0.15;
     width: 60%;
-    transform: translate(-30%, -30%);
   }
 
   80% {
     opacity: 0.3;
     width: 80%;
-    transform: translate(-40%, -40%);
   }
 
   100% {
     opacity: 0.5;
     width: 100%;
-    transform: translate(-45%, -45%);
   }
 }
 

@@ -16,7 +16,7 @@ export function Header() {
     const spider = document.createElement('img')
     spider.src = AranhaAndando
     spider.id = 'walking-spider'
-    spider.className = 'absolute top-0 left-[40%] h-[100%]'
+    spider.className = 'absolute top-0 left-[50%] h-[100%] transform translate-x-[-50%]'
 
     root.appendChild(spider)
 
@@ -30,15 +30,15 @@ export function Header() {
   }
 
   return (
-    <header className='flex justify-between py-4 px-8 bg-primary items-center text-white h-[10vh]'>
+    <header className='flex justify-between py-6 px-8 items-center text-white h-[10vh]'>
       <div>
         <Link to='/'>
-          <GiPumpkinMask className='text-6xl text-secondary' />
+          <GiPumpkinMask className='2xl:text-6xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-secondary' />
         </Link>
       </div>
 
       <div>
-        <button className='btn-primary' onClick={activeSpider}>Explorar</button>
+        <button className='btn-primary text-xl' onClick={activeSpider}>Explorar</button>
       </div>
     </header>
   )
