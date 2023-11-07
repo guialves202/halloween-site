@@ -7,7 +7,9 @@
     "seed": "tsx prisma/seed.ts"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsx",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
